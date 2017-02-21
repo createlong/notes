@@ -1,0 +1,20 @@
+
+<volist name="ContentRes" id="content">
+    <tr>
+        <td><input type="checkbox" name="pushcheck" id="{$content.news_id}"></td>
+        <td><input size=4 type="text" name="listorder[{$content.news_id}]" value="{$content.listorder}"></td>
+        <td>{$content.news_id}</td>
+        <td>{$content.title}</td>
+        <td>{$content.catid|getMenu=$menu_select,###}</td>
+        <td>{$content.copyfrom}</td>
+        <td>{$content.thumb|is_hasthumb}</td>
+        <td>{$content.create_time}</td>
+        <td>{$content.status}</td>
+        <td>修改 删除</td>
+    </tr>
+</volist>
+<nav>
+    <div class="page">
+        {$contentShow}
+    </div>
+</nav>
